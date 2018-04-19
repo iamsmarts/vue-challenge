@@ -16,10 +16,10 @@
                 v-for="(movie, index) in movies"
                 :class="[{'end': index === (movies.length -1)},'small-12','medium-3', 'columns', 'movie-cell',]"
                 :key="index" >
-               <p class="mTitle"><strong>{{movie.title}}</strong></p>
                <router-link :to="{name:'Trailers', params:{id:index, movieID:movie.trailerID, movieTitle:movie.title}}">
                   <img :src="movie.poster" alt="" class="">
                </router-link>
+               <p class="mTitle"><strong>{{movie.title}}</strong></p>
                <p class="mRelease"><em>{{movie.released}}</em></p>
                <router-link :to="{name:'Trailers', params:{id:index, movieID:movie.trailerID, movieTitle:movie.title}}" class="button">View Trailer</router-link>
 
